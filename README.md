@@ -1,5 +1,5 @@
-ATMega32u2 USB WS2812B Driver
-=============================
+ATMega32u2 USB 1,365 WS2812B Driver
+===================================
 
 A number of people often comment about the sizes of USB messages, and the need to buffer things.  That is ridiculous.  This particularly bothers me when it comes to WS2812's.  Though they have not-so-lenient timing requirements, such as demanding that all data is sent in one go... It is possible to concurrently do things on an AVR while sending data to the WS2812.
 
