@@ -1,0 +1,31 @@
+
+http://cpldcpu.wordpress.com/2014/01/14/light_ws2812-library-v2-0-part-i-understanding-the-ws2812/
+
+0 code: T0H, T0L  (High then low)
+1 code: T1H, T1L  (High then low)
+TReset: Low for period of time.
+
+THI "0" = 62.5ns to 563ns
+THI "1" > 625ns
+PERIOD >= 1036ns
+
+Part 1:
+Consider TXD1...  Maybe USART in SPI mode?
+ (Because not-idle will be low)
+
+
+Note to self: Here is the pinout.
+ SDA 1 2 VCC  (SDA = TxD)
+ SCK 3 4 3V3
+ RST 5 6 GND
+
+
+What if we use one nibble out
+
+HI HI HI LO
+vs
+HI LO LO LO
+
+No.  This is lame.
+
+Let's see what bit banging gets us.
