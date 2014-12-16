@@ -7,6 +7,13 @@ By taking out the buffers and piplining the code, you can send over 1,000 LEDs i
 
 Turns out those "limitations" of the AVR like 1kB of RAM aren't really that big of a deal after all.
 
+
+Hardware
+--------
+
+All you need for this project:  An ATMega32u2 with a USB port attached to it, and a string of WS2812's hooked up to PORTD.3.
+
+
 How to talk to the AVR?
 -----------------------
 
