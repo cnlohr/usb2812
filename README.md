@@ -24,6 +24,7 @@ The idea behind how this works is as follows (see usb.c)
 (2) Compute how many blocks will be needed.
 (3) Compute how much remainder there will be (if bytes transferred does not fill frame)
 (4) Start reading data; interleving the WS2812 outputs.
+```
 	...
 		buf[0] = UEDATX;  //Read data from USB
 		SEND_WS(buf[0]);  //Send WS2812 Data.
@@ -64,7 +65,7 @@ The idea behind how this works is as follows (see usb.c)
 			usb_wait_receive_out();
 
 	(Repeat)
-
+```
 License Info:
 
  * USB Keyboard Example for Teensy USB Development Board
