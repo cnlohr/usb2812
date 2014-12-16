@@ -7,6 +7,7 @@ By taking out the buffers and piplining the code, you can send over 1,000 LEDs i
 
 Turns out those "limitations" of the AVR like 1kB of RAM aren't really that big of a deal after all.
 
+Check out the video here: https://www.youtube.com/watch?v=Y5ldIov4JmM
 
 Hardware
 --------
