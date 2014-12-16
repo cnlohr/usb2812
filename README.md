@@ -1,5 +1,5 @@
-ATMega32u2 USB 1,365 WS2812B Driver
-===================================
+ATMega32u2 USB 1,365 WS2812Bs Driver
+====================================
 
 Many programmers have often taken to the mentality that it's a good thing to use buffers when dealing with USB.  I strongly disagree.  If you can do things with direct access to the hardware, it often behooves you to do so.  Ordinarily, an ATMega32u2 would only be able to buffer ~300 WS2812 LEDs, or less depending on the USB stack.
 
