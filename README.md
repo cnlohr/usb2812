@@ -1,11 +1,11 @@
 ATMega32u2 USB 1,365 WS2812B Driver
 ===================================
 
-A number of people often comment about the sizes of USB messages, and the need to buffer things.  That is ridiculous.  This particularly bothers me when it comes to WS2812's.  Though they have not-so-lenient timing requirements, such as demanding that all data is sent in one go... It is possible to concurrently do things on an AVR while sending data to the WS2812.
+Many programmers have often taken to the mentality that it's a good thing to use buffers when dealing with USB.  I strongly disagree.  If you can do things with direct access to the hardware, it often behooves you to do so.  Ordinarily, an ATMega32u2 would only be able to buffer ~300 WS2812 LEDs, or less depending on the USB stack.
 
-You can actually cause USB messages to continue across multiple messages, interleved with sending to the WS2812.  That allows a single control message to be significantly larger than the endpoint size - and you can reap excellent performance increases and low-latency!
+By taking out the buffers and piplining the code, you can send over 1,000 LEDs in one go!  AND!  With less latency!  All with just a single control message, so controlling it is trivial!
 
-For this project, it is a WS2812 driver for a ATMega32u2.  I've tested it up to 1365 LEDs per AVR.  The AVR only has 1kB of RAM.  This is a 4kB operation.  Turns out you don't need to buffer any of this stuff.
+Turns out those "limitations" of the AVR like 1kB of RAM aren't really that big of a deal after all.
 
 How to talk to the AVR?
 -----------------------
